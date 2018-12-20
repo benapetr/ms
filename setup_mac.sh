@@ -13,4 +13,11 @@ then
 fi
 ./setup_git.sh
 
+read -p "Do you want to disable app guard? [y/n]" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    sudo spctl --master-disable
+fi
+
 echo "Done"
