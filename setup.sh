@@ -7,4 +7,6 @@ else
     cp .vimrc ~/.vimrc || exit 1
 fi
 
+./shell/configure.sh || exit 1
+
 echo "Done"
